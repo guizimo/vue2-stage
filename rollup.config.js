@@ -1,3 +1,4 @@
+import babel from 'rollup-plugin-babel'
 export default {
   input: './src/index.js',
   output: {
@@ -7,6 +8,8 @@ export default {
     sourcemap: true
   },
   plugins: [
-    babel
+    babel({
+      exclude: 'node_modules/**'
+    })
   ]
 }
